@@ -14,3 +14,30 @@ print("I am " + str(my_questionnaire._age) + " years old")
 print("And my favourite language is " + my_questionnaire._fav_prog_lang + ". I absolutely love it")
 
 '''
+
+
+class Horse:
+    population = 0
+
+    def __init__(self, name, breed, color):
+        self._name = name
+        self._breed = breed
+        self._color = color
+        self._hooves = 4
+        self.population += 1
+
+    def nicker(self):
+        print('*Бешенное игогокания психически неуравновешонной лошади*')
+
+    def hop(self):
+        print('Hop-hop-hop')
+
+    def eat(self):
+        print('*Звуки агрессивного поедания всего и вся*')
+
+    def kick(self):
+        print('*Sound of 5 human bones being broken*')
+
+myhorse = Horse("Betty", "American", "black")
+print(myhorse._name)
+myhorse.kick()
