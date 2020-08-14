@@ -16,9 +16,17 @@ print("And my favourite language is " + my_questionnaire._fav_prog_lang + ". I a
 '''
 
 
+class Jockey:
+    def __init__(self, name, horse):
+        Jockey._name = name
+        Jockey._horse = horse
+
+    def ride(self, horse):
+        horse.hop()
+
+
 class Horse:
     population = 0
-
     def __init__(self, name, breed, color):
         self._name = name
         self._breed = breed
@@ -38,6 +46,8 @@ class Horse:
     def kick(self):
         print('*Sound of 5 human bones being broken*')
 
-myhorse = Horse("Betty", "American", "black")
-print(myhorse._name)
-myhorse.kick()
+myhorse = Horse('Betty', 'American', 'black')
+Jockey = Jockey('Mike', myhorse)
+Jockey.ride(myhorse)
+
+
